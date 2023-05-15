@@ -1,0 +1,121 @@
+{
+  "type": "modal",
+  "title": {
+    "type": "plain_text",
+    "text": "Create a Meetsy",
+    "emoji": true
+  },
+  "submit": {
+    "type": "plain_text",
+    "text": "Create",
+    "emoji": true
+  },
+  "close": {
+    "type": "plain_text",
+    "text": "Cancel",
+    "emoji": true
+  },
+  "blocks": [
+    {
+      "block_id": "duration-block",
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Select a Duration"
+      },
+      "accessory": {
+        "type": "static_select",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "30 min"
+            },
+            "value": "30"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "60 min"
+            },
+            "value": "60m"
+          }
+        ],
+        "action_id": "create-duration-selection-action"
+      }
+    },
+    {
+      "block_id": "frequency-block",
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Set Meeting Frequency"
+      },
+      "accessory": {
+        "type": "static_select",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Pick an option",
+          "emoji": true
+        },
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Monthly",
+              "emoji": true
+            },
+            "value": "monthly"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Weekly",
+              "emoji": true
+            },
+            "value": "weekly"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Biweekly",
+              "emoji": true
+            },
+            "value": "biweekly"
+          }
+        ],
+        "action_id": "create-frequency-selection-action"
+      }
+    },
+    {
+      "block_id": "join-block",
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Allow channel members to join"
+      },
+      "accessory": {
+        "type": "radio_buttons",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Include everyone in this channel",
+              "emoji": true
+            },
+            "value": "allIn"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Allow members to opt in",
+              "emoji": true
+            },
+            "value": "optIn"
+          }
+        ],
+        "action_id": "create-joinType-selection-action"
+      }
+    }
+  ]
+}
